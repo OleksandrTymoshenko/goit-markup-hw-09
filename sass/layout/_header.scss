@@ -1,6 +1,12 @@
 .header {
-  border-bottom: 2px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
+
 
 .header__logo {
   font-family: Raleway;
@@ -46,9 +52,10 @@
 }
 
 .nav-list {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .nav-list__item,
@@ -90,10 +97,23 @@
   }
   
 .contacts-list {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
+  display: none;
+    margin-left: auto;
+    @media screen and (min-width: 768px) {
+      display: block;
+        .header-contacts__item {
+        &:not(:last-child) {
+          @media screen and (min-width: 768px) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
 
 .contacts-list__link {
   display: flex;
