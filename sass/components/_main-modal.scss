@@ -191,6 +191,7 @@
     line-height: 1.16;
     letter-spacing: 0.03em;
     cursor: pointer;
+    justify-content: space-between;
 
     @media screen and (max-width: 320px) {
       font-size: 10px;
@@ -206,16 +207,17 @@
 }
   
   .icon-check {    
-    width: 15px;
+    width: 16px;
     height: 16px;
     border: 2px solid var(--black);
     border-radius: 2px;
     margin-right: 5px;
-    display: block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     fill: var(--white);
       @media screen and (max-width: 320px) {
-      width: 15px;
+      width: 16px;
       height: 16px;
   }
 }
