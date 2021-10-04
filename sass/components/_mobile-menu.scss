@@ -1,0 +1,119 @@
+.mobile {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-background-color);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 48px 25px;
+  max-width: 480px;
+  
+  @media screen and (min-width: 768px) {
+      display: none;
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+  }
+
+  &__nav-item:not(:last-child) {
+    padding-bottom: 32px;
+  }
+  &__nav-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--title-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__contacts-link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      font-size: 34px;
+      line-height: 1.18;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__social-item {
+    display: flex;
+  }
+  &__social-item:not(:last-child) {
+    margin-right: 10px;
+    &::after {
+      content: '';
+      display: inline-flex;
+      width: 1px;
+      height: 22px;
+      background-color: rgba(33, 33, 33, 0.2);
+      margin-left: 10px;
+    }
+  }
+  &__social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+    &:focus,
+    &:hover {
+      color: #188ce8;
+    }
+  }
+}
+.mobile__close-icon {
+  width: 18px;
+  height: 18px;
+  border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .mobile__close-btn:hover &,
+  .mobile__close-btn:focus & {
+    fill: var(--white);
+  }
+}
+
+
+// .mobile__social {
+//   text-decoration: none;
+// }

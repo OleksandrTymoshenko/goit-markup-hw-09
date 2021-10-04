@@ -1,0 +1,102 @@
+.team-section {
+  background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.teammates-list {
+  @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+  }
+}
+
+.teammates-list__item {
+  margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin-left: 30px;
+      margin-top: 30px;
+      margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 16px;
+  justify-content: center;
+}
+
+.team-card__name {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.teammate-occupation {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--grey);
+  text-align: center;
+}
+.teammates-list__item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teammates-social-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+.teammates-social-links__list{
+  align-content: center;
+  margin-left: 10px;
+}
+.teammates-social-links__item {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.teammates-social-links__current-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #afb1b8;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: var(--blue);
+      fill: var(--white);
+    }
+}
+
+.teammates-list__img {
+  max-width: 100%;
+  height: auto;
+}

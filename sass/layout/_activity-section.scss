@@ -1,0 +1,53 @@
+.activity-section {
+  padding-top: 47px;
+  padding-bottom: 94px;
+  background-color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 1199px) {
+      display: none;
+  }
+}
+
+.activity-list__img-wrapper {
+    position: relative;
+}
+
+.activity-list {
+  display: flex;
+  justify-content: center;
+}
+
+.activity-list__item {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: calc(16 / 12);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 30px;
+  max-width: 370px;
+    &:last-child {
+      margin-right: 0;
+      margin-left: 0;
+    }
+ }
+
+ .activity-overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--white);
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
